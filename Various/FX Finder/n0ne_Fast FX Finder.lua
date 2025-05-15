@@ -78,14 +78,14 @@ SETTINGS_BASE_FOLDER = script_path
 SETTINGS_INI_FILE = script_path .. "fx-finder-settings.ini"
 SETTINGS_DEFAULT_FILE = script_path .. "REQ/fx-finder-settings-default.ini"
 
-COLOR_VST = jColor:new({.6, .6, .6, 1})
-COLOR_VSTI = jColor:new({0.8, 0.8, 0.5, 1})
-COLOR_FXCHAIN = jColor:new({0.5, 0.5, 0.8, 1})
-COLOR_TEMPLATE = jColor:new({0.5, 0.7, 0.5, 1})
-COLOR_JSFX = jColor:new({0.7, 0.5, 0.5, 1})
-COLOR_AU = jColor:new({0.5, 0.5, 0.7, 1})
-COLOR_AUI = jColor:new({0.5, 0.7, 0.7, 1})
-COLOR_ACTION = jColor:new({0.8, 0.5, 0.5, 1})
+COLOR_VST = jColor:new({0.3, 0.3, 0.3, 1})
+COLOR_VSTI = jColor:new({0.6, 0.4, 0.0, 1})
+COLOR_FXCHAIN = jColor:new({0.1, 0.3, 0.7, 1})
+COLOR_TEMPLATE = jColor:new({0.0, 0.5, 0.2, 1})
+COLOR_JSFX = jColor:new({0.7, 0.2, 0.2, 1})
+COLOR_AU = jColor:new({0.4, 0.2, 0.6, 1})
+COLOR_AUI = jColor:new({0.6, 0.3, 0.7, 1})
+COLOR_ACTION = jColor:new({0.8, 0.1, 0.1, 1})
 
 function msg(m)
 	return reaper.ShowConsoleMsg(tostring(m) .. "\n")
@@ -557,7 +557,7 @@ function findVst(vstTable, sPattern, iInstance, iMaxResults, find_plain)
     end
 end
 
-jGuiHighlightControl = jGuiControl:new({highlight = {}, color_highlight = {1, .9, 0, .2},})
+jGuiHighlightControl = jGuiControl:new({highlight = {}, color_highlight = {1, .9, 0, .4},})
 
 function jGuiHighlightControl:_drawLabel()
 	-- msg(self.label)

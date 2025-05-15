@@ -27,7 +27,7 @@ jGuiControl = {
 		focus = {.5, .5, .5, 1},
 		active = {1, .9, 0, .5}
 	},
-	color_focus_border = {1, .9, 0, .5},
+	color_focus_border = {0, 0, 0, 0.2},
 
 	label_fontsize = 10,
 	label_font = "Calibri",
@@ -413,13 +413,17 @@ jGuiTextInput = jGuiControl:new(
 	controlType = "text_input",
 	kb = require('REQ.jKeyboard'),
 
-	border_focus = true,
+	colors_label = {
+    normal = {0, 0, 0, 1},
+	},
+
+	border_focus = false,
 	-- color_focus_border = {1, .9, 0, .5},
 	color_focus_border = jGuiColors:get("yellow", 0.5),
 
 	carret_pos = 0,
 	carret_draw = true,
-	carret_color = {1, .9, .5, 1},
+	carret_color = {0, 0, 0, 1},
 	_carret_blink_timer = 0,
 	_carret_blink = false
 })
